@@ -1,0 +1,26 @@
+{
+  "name": "Chat-app",
+  "version": "1.0.0",
+  "description": "React.js Node.js Apollo server  Sequalize ORM Postgresql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/githaixu/Chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/githaixu/Chat-app/issues"
+  },
+  "homepage": "https://github.com/githaixu/Chat-app#readme",
+  "dependencies": {
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.5.1",
+    "sequelize-cli": "^6.2.0"
+  }
+}
