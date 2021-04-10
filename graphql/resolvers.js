@@ -1,7 +1,17 @@
+const { User } = require('../models');
+
 const resolvers = {
   Query: {
-    hello: () => "there",
-    time: () => "time is 17:57"
+    getUsers: () => {
+      const users = [
+        {
+          id:1,
+          username: 'jin',
+          email: 'test@hotmail.co.jp' 
+        }
+      ];
+      return users;
+    }
   },
 };
 
