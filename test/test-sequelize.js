@@ -22,10 +22,15 @@ const User = sequelize.define("user", {
 //     cash: DataTypes.INTEGER
 // })
 
-
-User.build({name: jin, favoriteColor: 'blue', age: 30, cash: 'infinit'})
-User.save().then(() => console.log('saved'))
+// save the instance
 // User.create({name: jin, favoriteColor: 'blue', age: 30, cash: 'infinit'})
+User.build({name: jin, favoriteColor: 'blue', age: 30, cash: 'infinit'})
+const jin = await User.save();
+jin.name = 'li';
+User.save();
+//delete the instance
+await jin.destroy()
+
 
 console.log(123);
 
