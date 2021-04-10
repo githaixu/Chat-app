@@ -1,6 +1,7 @@
 const resolvers = {
   Query: {
     hello: () => "there",
+    time: () => "time is 17:57"
   },
 };
 
