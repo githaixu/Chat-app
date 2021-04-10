@@ -8,3 +8,9 @@ npx sequelize --help
 15:33
 #set up sequelize
 npx sequelize init
+
+
+16:48
+#connect to the database
+change the sequelize config.json file
+and use sequelize.authenticate() to conncet to the database

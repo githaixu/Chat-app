@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
+    "username": "haixujin",
     "password": null,
-    "database": "database_development",
+    "database": "chatapp",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "test": {
-    "username": "root",
+    "username": "haixujin",
     "password": null,
-    "database": "database_test",
+    "database": "chatapp",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "production": {
-    "username": "root",
+    "username": "haixujin",
     "password": null,
-    "database": "database_production",
+    "database": "chatapp",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   }
 }

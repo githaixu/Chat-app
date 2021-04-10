@@ -31,7 +31,10 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+
+// lowercase for the instance of the databace
 db.sequelize = sequelize;
+// uppercase for the package itself 
 db.Sequelize = Sequelize;
 
 module.exports = db;
