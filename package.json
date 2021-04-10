@@ -4,7 +4,8 @@
   "description": "React.js Node.js Apollo server  Sequalize ORM Postgresql",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,10 @@
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.5.1",
     "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "add": "^2.0.6",
+    "nodemon": "^2.0.7",
+    "yarn": "^1.22.10"
   }
 }
