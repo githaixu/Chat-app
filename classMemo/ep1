@@ -1,7 +1,10 @@
 12:08
-
 #download sequelize and sequelize cli(command line interface)
 参照https://www.npmjs.com/package/sequelize-cli
 npm install --save sequelize 
 npm install --save-dev sequelize-cli
 npx sequelize --help
+
+15:33
+#set up sequelize
+npx sequelize init
