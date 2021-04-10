@@ -1,22 +1,35 @@
-const { Sequelize, Op, Model, DataTypes } = require("sequelize");
+const { Sequelize, Model, DataTypes } = require("sequelize");
 const sequelize = new Sequelize("sqlite::memory:");
 
-class Users extends Model {}
+const User = sequelize.define("user", {
+  name: DataTypes.TEXT,
+  favoriteColor: {
+    type: DataTypes.TEXT,
+    defaultValue: 'green'
+  },
+  age: DataTypes.INTEGER,
+  cash: DataTypes.INTEGER
+});
 
-Users.init({
-    firstName: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    lastName: {
-        type: DataTypes.STRING,
-        allowNull: false
-    }
-}, {
-    sequelize,
-    modelName: Users,
-    freezeTableName: true
-})
+// class User extends Model {}
+// User.init({
+//     name: DataTypes.TEXT,
+//     favoriteColor: {
+//       type: DataTypes.TEXT,
+//       defaultValue: 'green'
+//     },
+//     age: DataTypes.INTEGER,
+//     cash: DataTypes.INTEGER
+// })
 
-console.log(`is the defined model the class itself ${Users === sequelize.model.Users}`)
-await Users.sync({ force: true })
+
+User.build({name: jin, favoriteColor: 'blue', age: 30, cash: 'infinit'})
+User.save().then(() => console.log('saved'))
+// User.create({name: jin, favoriteColor: 'blue', age: 30, cash: 'infinit'})
+
+console.log(123);
+
+(async () => {
+  await sequelize.sync({ force: true });
+  // Code here
+})();
