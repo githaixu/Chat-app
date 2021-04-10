@@ -14,3 +14,13 @@ npx sequelize init
 #connect to the database
 change the sequelize config.json file
 and use sequelize.authenticate() to conncet to the database
+
+24:00
+#use cli to create model and migration
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+
+#running migration 
+npx sequelize-cli db:migrate
+this will create a table based on the model and migration
+
+#change the resolver to fetch the data from the model
