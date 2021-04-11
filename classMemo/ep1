@@ -1,0 +1,26 @@
+12:08
+#download sequelize and sequelize cli(command line interface)
+参照https://www.npmjs.com/package/sequelize-cli
+npm install --save sequelize 
+npm install --save-dev sequelize-cli
+npx sequelize --help
+
+15:33
+#set up sequelize
+npx sequelize init
+
+
+16:48
+#connect to the database
+change the sequelize config.json file
+and use sequelize.authenticate() to conncet to the database
+
+24:00
+#use cli to create model and migration
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+
+#running migration 
+npx sequelize-cli db:migrate
+this will create a table based on the model and migration
+
+#change the resolver to fetch the data from the model
