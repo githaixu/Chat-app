@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "haixujin",
+    "password": null,
+    "database": "chatapp",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "haixujin",
+    "password": null,
+    "database": "chatapp",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "haixujin",
+    "password": null,
+    "database": "chatapp",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
