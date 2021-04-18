@@ -1,4 +1,3 @@
-const { User } = require('../models');
 const bcrypt = require('bcryptjs');
 const { UserInputError } = require('apollo-server');
 
@@ -14,7 +13,7 @@ const resolvers = {
     }
   },
   Mutation: {
-    register: async (parent, args, context, info) => {
+    register: async (parent, args, { db }, info) => {
       let { username, email, password, confirmPassword } = args;
       let errors = {};
       try {
@@ -25,8 +24,8 @@ const resolvers = {
         if(confirmPassword.trim() === '') errors.confirmPassword = 'confirmPassword must not be empty';
         if(password !== confirmPassword) errors.confirmPassword = 'confirmPassword must match password';
         // check if username and email already exists
-        const hasUsername = await User.findOne({where: { username }});
-        const hasEmail = await User.findOne({where: { email }});
+        const hasUsername = await db.User.findOne({where: { username }});
+        const hasEmail = await db.User.findOne({where: { email }});
          
         if(hasUsername) errors.username = 'username is taken';
         if(hasEmail) errors.email = 'email is taken';
@@ -35,7 +34,7 @@ const resolvers = {
         // hash password
         password = await bcrypt.hash(password, 6);
         // create user
-        const user = await User.create({username, email, password});
+        const user = await db.User.create({username, email, password});
         // return user auto called to toJASON
         return user;
       } catch (errors) {
